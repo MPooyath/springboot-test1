@@ -1,0 +1,28 @@
+version: '3.8'
+services:
+  app:
+    container_name: springboot-test
+    image: springboot-test
+    build: ./
+    ports:
+      - "8080:8080"
+    depends_on:
+      - postgres-0
+  postgres-0:
+    image: postgres:alpine
+    ports:
+      - "5433:5432"
+#    environment:
+#      - POSTGRES_PASSWORD=postgres
+#      - POSTGRES_USER=postgres
+#      - POSTGRES_DB=postgres
+
+    env_file:
+    - .env
+
+
+
+
+
+
+
