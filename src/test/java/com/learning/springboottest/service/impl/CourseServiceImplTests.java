@@ -41,6 +41,7 @@ public class CourseServiceImplTests {
         assertThat(savedCourse).isNotNull();
         assertEquals(course.getCourseName(), savedCourse.getCourseName());
         assertEquals(course.getDescription(), savedCourse.getDescription());
+        assertEquals(course.getId(), savedCourse.getId());
     }
 
     @Test
